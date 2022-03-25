@@ -69,7 +69,7 @@ class Decks {
     //shuffle the deck
     deckShuffle() {
         for (let i = 0; i < this.fullDeck - 1; i++) {
-            const rndIndex = Math.floor(Math.random() * (i - 1))
+            const rndIndex = Math.trunc(Math.random() * (i - 1))
             const firstIndex = this.cards[rndIndex]
             this.cards[rndIndex] = this.cards[i]
             this.cards[i] = firstIndex
