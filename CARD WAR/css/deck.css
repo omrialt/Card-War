@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h3,
+h1 {
+  text-align: center;
+}
+
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-box .deck, .flex-box .card {
+  height: 300px;
+  width: 214px;
+  margin: 4px;
+  font-size: 40px;
+  border-radius: 12px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../img/card.png");
+}
+
+.flex-box .user-deck:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.flex-box .card {
+  position: relative;
+  background-color: white;
+  background-image: none;
+}
+
+.flex-box .card-slot .red {
+  color: red;
+}
+
+.flex-box .card-slot .black {
+  color: black;
+}
+
+.flex-box .card::before,
+.flex-box .card::after {
+  content: attr(data-value);
+  position: absolute;
+}
+
+.flex-box .card::before {
+  top: 6px;
+  left: 6px;
+}
+
+.flex-box .card::after {
+  bottom: 6px;
+  right: 6px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  color: black;
+  text-align: center;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center .btn {
+  width: 150px;
+  background-color: #cf5c5c;
+  border-radius: 24px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .flex-box .deck, .flex-box .card {
+    height: 220px;
+    width: 157px;
+    background-image: url("../img/card-s.png");
+  }
+  .flex-box .card {
+    background-color: white;
+    background-image: none;
+  }
+}
+/*# sourceMappingURL=deck.css.map */
